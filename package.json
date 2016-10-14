@@ -2,7 +2,7 @@
   "name": "react-image-crop-component",
   "version": "1.0.1",
   "description": "Component for easy image cropping in react",
-  "main": "lb/react-image-crop-component.js",
+  "main": "lib/react-image-crop-component.js",
   "keywords": [
     "react",
     "reactjs",
