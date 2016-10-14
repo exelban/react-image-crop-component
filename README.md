@@ -54,13 +54,13 @@ ReactDOM.render(<Demo/>, document.getElementById('app'));
 ```
 You can of course pass a blob path or base64 data.
 
-#####onCrop
+#####onCrop (optional)
 ```javascript 
 <ReactImageCrop onCrop={this.test} src="demo.jpg"/>
 ```
 A callback which happens after a resize, drag, or nudge. Passes the current crop state object, as well as a pixel-converted crop for your convenience.
 
-#####onCropData
+#####onCropData (optional)
 ```javascript 
 <ReactImageCrop onCropData={this.test} src="demo.jpg"/>
 ```
@@ -75,7 +75,7 @@ Return:
   }
 ```
 
-#####onChange
+#####onChange (optional)
 ```javascript 
 <ReactImageCrop onChange={this.test} src="demo.jpg"/>
 ```
@@ -91,7 +91,7 @@ Return:
 ```
 Passes the current crop state object, as well as a pixel-converted crop for your convenience.
 
-#####square
+#####square (optional)
 ```javascript 
 <ReactImageCrop square={true} src="demo.jpg"/>
 ```
