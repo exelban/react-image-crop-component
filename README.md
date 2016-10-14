@@ -13,13 +13,12 @@ npm install react-image-crop-component
 ```
 
 ##Usage
-nclude the main js module, e.g.:
+Include the main js module, e.g.:
 ```javascript
 var ReactImageCrop = require('react-image-crop-component');
 // or es6:
 import ReactImageCrop from 'react-image-crop-component';
 ```
-Also you need to connect css styles ```lib/react-image-crop-component.css```.
 
 ###Example
 ```javascript
