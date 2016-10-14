@@ -1,7 +1,7 @@
 # react-image-crop-component
-[![build status](https://img.shields.io/wercker/ci/wercker/docs.svg)](http://www.npmjs.com/package/react-swipe-component)
-[![npm version](https://badge.fury.io/js/react-swipe-component.svg)](http://www.npmjs.com/package/react-swipe-component)
-[![Download Count](http://img.shields.io/npm/dt/react-swipe-component.svg)](http://www.npmjs.com/package/react-swipe-component)
+[![build status](https://img.shields.io/wercker/ci/wercker/docs.svg)](http://www.npmjs.com/package/react-image-crop-component)
+[![npm version](https://badge.fury.io/js/react-image-crop-component.svg)](http://www.npmjs.com/package/react-image-crop-component)
+[![Download Count](http://img.shields.io/npm/dt/react-image-crop-component.svg)](http://www.npmjs.com/package/react-image-crop-component)
 
 ![](https://psv4.vk.me/c812432/u24186162/docs/b8143a59c5a9/crop.gif?extra=0441mptz3a6q3V4rTTrLB4tRwreOLWF2nMbN4uGBJ2W2Wrb7VWB9x28slE7fvHcm0cag3GUx_BxurIOv_zf2e6MM3KC3B_HlZuVhiIoh_yip0yUzIXElSw)
 
