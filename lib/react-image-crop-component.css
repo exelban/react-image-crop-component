@@ -1,0 +1,43 @@
+.react-image-crop-component{
+    width: auto;
+    height: auto;
+    min-width: 0;
+    position: relative;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.react-image-crop-component > .react-image-crop-component-bg{
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 33, 33, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    cursor: crosshair;
+}
+.react-image-crop-component > img{
+    max-height: 100%;
+    max-width: 100%;
+}
+.react-image-crop-component > .react-image-crop-component-crop{
+    width: 0;
+    height: 0;
+    background: transparent;
+    position: absolute;
+    cursor: grab;
+    cursor: -webkit-grab;
+    border: dashed #ffffff 3px;
+    z-index: 2;
+    border-radius: 4px;
+    overflow: hidden;
+    display: none;
+}
+.react-image-crop-component > .react-image-crop-component-crop:active{
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+}
