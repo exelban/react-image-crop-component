@@ -29,7 +29,7 @@ var ReactImageCrop = require('react-image-crop-component');
 var Demo = React.createClass({
     render(){
         return (<div style={{width: "300px", height: "300px"}}>
-            <ReactImageCrop square={false} onCrop={this.onCropped} onCropData={this.onCroppedData}  onChange={this.onChanged} src="demo.jpg"/>
+            <ReactImageCrop setWidth={300} setHeight={300} square={false} onCrop={this.onCropped} onCropData={this.onCroppedData}  onChange={this.onChanged} src="demo.jpg"/>
         </div>);
     },
     onChanged: function (e) {
@@ -52,6 +52,18 @@ ReactDOM.render(<Demo/>, document.getElementById('app'));
 <ReactImageCrop src="demo.jpg"/>
 ```
 You can of course pass a blob path or base64 data.
+
+#####setWidth (optional)
+```javascript 
+<ReactImageCrop setWidth={300} src="demo.jpg"/>
+```
+You can set cropper element width. Default 100%. (If you have some problems with size in Google Chrome, try to set his value).
+
+#####setHeight (optional)
+```javascript 
+<ReactImageCrop setHeight={300} src="demo.jpg"/>
+```
+You can set cropper element height. Default 100%. (If you have some problems with size in Google Chrome, try to set his value).
 
 #####onCrop (optional)
 ```javascript 
@@ -102,7 +114,9 @@ If true, the selection will have an a square one. Default value is ```false```
   onCrop: React.PropTypes.func,
   onCropData: React.PropTypes.func,
   onChange: React.PropTypes.func,
-  square: React.PropTypes.bool
+  square: React.PropTypes.bool,
+  setWidth: React.PropTypes.number,
+  setHeight: React.PropTypes.number
 ```
 ##License
 **MIT Licensed**
