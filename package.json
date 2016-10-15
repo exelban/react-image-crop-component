@@ -1,8 +1,8 @@
-{
+{ 
   "name": "react-image-crop-component",
-  "version": "1.0.1",
+  "version": "0.0.4",
   "description": "Component for easy image cropping in react",
-  "main": "lib/react-image-crop-component.js",
+  "main": "lib/ReactImageCrop.js",
   "keywords": [
     "react",
     "reactjs",
@@ -23,13 +23,21 @@
     "email": "mitrovtsiy@ukr.net"
   },
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "browserify": "*",
-    "react": ">=0.12.x"
+    "react": "*"
   },
   "browserify": {
     "transform": [
       "reactify"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exelban/react-image-crop-component.git"
+  },
+  "bugs": {
+    "url": "https://github.com/exelban/react-image-crop-component/issues"
+  },
+  "homepage": "https://github.com/exelban/react-image-crop-component#readme"
 }
