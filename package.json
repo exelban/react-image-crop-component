@@ -24,6 +24,12 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "browserify": "*",
     "react": ">=0.12.x"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
   }
 }
