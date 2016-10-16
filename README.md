@@ -47,31 +47,43 @@ ReactDOM.render(<Demo/>, document.getElementById('app'));
 ```
 
 ###Props
-#####src (REQUIRED)
+#####src (REQUIRED, String)
 ```javascript 
 <ReactImageCrop src="demo.jpg"/>
 ```
 You can of course pass a blob path or base64 data.
 
-#####setWidth (optional)
+#####setWidth (optional, Number)
 ```javascript 
 <ReactImageCrop setWidth={300} src="demo.jpg"/>
 ```
 You can set cropper element width. Default 100%. (If you have some problems with size in Google Chrome, try to set his value).
 
-#####setHeight (optional)
+#####setHeight (optional, Number)
 ```javascript 
 <ReactImageCrop setHeight={300} src="demo.jpg"/>
 ```
 You can set cropper element height. Default 100%. (If you have some problems with size in Google Chrome, try to set his value).
 
-#####onCrop (optional)
+#####resize (optional, Boolean)
+```javascript 
+<ReactImageCrop resize={true} src="demo.jpg"/>
+```
+If true, user can resize cropping element. Default value is ```true```
+
+#####square (optional, Boolean)
+```javascript 
+<ReactImageCrop square={true} src="demo.jpg"/>
+```
+If true, the selection will have an a square one. Default value is ```false```
+
+#####onCrop (optional, Function)
 ```javascript 
 <ReactImageCrop onCrop={this.test} src="demo.jpg"/>
 ```
 A callback which happens after a resize, drag, or nudge. Passes the current crop state object, as well as a pixel-converted crop for your convenience.
 
-#####onCropData (optional)
+#####onCropData (optional, Function)
 ```javascript 
 <ReactImageCrop onCropData={this.test} src="demo.jpg"/>
 ```
@@ -86,7 +98,7 @@ Return:
   }
 ```
 
-#####onChange (optional)
+#####onChange (optional, Function)
 ```javascript 
 <ReactImageCrop onChange={this.test} src="demo.jpg"/>
 ```
@@ -102,21 +114,16 @@ Return:
 ```
 Passes the current crop state object, as well as a pixel-converted crop for your convenience.
 
-#####square (optional)
-```javascript 
-<ReactImageCrop square={true} src="demo.jpg"/>
-```
-If true, the selection will have an a square one. Default value is ```false```
-
 #####PropTypes
 ```javascript
-  src: React.PropTypes.string,
-  onCrop: React.PropTypes.func,
-  onCropData: React.PropTypes.func,
-  onChange: React.PropTypes.func,
-  square: React.PropTypes.bool,
-  setWidth: React.PropTypes.number,
-  setHeight: React.PropTypes.number
+    src: React.PropTypes.string,
+    onCrop: React.PropTypes.func,
+    onCropData: React.PropTypes.func,
+    onChange: React.PropTypes.func,
+    square: React.PropTypes.bool,
+    setWidth: React.PropTypes.number,
+    setHeight: React.PropTypes.number,
+    resize: React.PropTypes.bool
 ```
 ##License
 **MIT Licensed**
