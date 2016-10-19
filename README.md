@@ -3,7 +3,7 @@
 [![npm version](https://badge.fury.io/js/react-image-crop-component.svg)](http://www.npmjs.com/package/react-image-crop-component)
 [![Download Count](http://img.shields.io/npm/dt/react-image-crop-component.svg)](http://www.npmjs.com/package/react-image-crop-component)
 
-![](https://psv4.vk.me/c810233/u24186162/docs/43bd3afc9220/react-image-crop-component.gif?extra=3TvaZMcdSoJY0Q-fe0Bk6V0trZKLZeKf3HtPiG9FNMPMG3ySS0QVtYEUa00MJdvezj2VfLqu3gKjkE6dDivfdlPT01BLdt35vUsWiQoyokrF9F-xhq8U5w)
+![](https://s14.postimg.org/x2xyr073l/react_image_crop_component.gif)
 
 Component for easy image cropping in react
 
