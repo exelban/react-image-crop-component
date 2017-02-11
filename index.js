@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react');
-require('./style.css');
+require ('../lib/style.css');
 
 var ReactImageCrop = React.createClass({
     displayName: 'ReactImageCrop',
