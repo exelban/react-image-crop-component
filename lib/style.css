@@ -1,0 +1,145 @@
+.block{
+    width: auto;
+    height: auto;
+    min-width: 0;
+    position: relative;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    ms-usermsUserSelect: none;
+    user-select: none;
+    overflow: hidden;
+}
+.crop{
+    width: 0;
+    height: 0;
+    background: transparent;
+    position: absolute;
+    cursor: move;
+    border: dashed #dddddd 2px;
+    z-index: 2;
+    border-radius: 4px;
+    display: none;
+    top: 50px;
+    left: 50px;
+}
+.preview{
+    width: 100%;
+    height: 100%;
+    cursor: move;
+    overflow: hidden;
+}
+.img{
+    max-height: 100%;
+    max-width: 100%;
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 33, 33, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    cursor: crosshair;
+}
+.resizeP0{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: solid #ffffff 0px;
+    cursor: move;
+    position: absolute;
+}
+.resizeP1{
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: solid #ffffff 1px;
+    cursor: ew-resize;
+    position: absolute;
+    top: 0;
+    left: -8px;
+    bottom: 0;
+    margin: auto;
+}
+.resizeP2{
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: solid #ffffff 1px;
+    cursor: ew-resize;
+    position: absolute;
+    top: 0;
+    right: -8px;
+    bottom: 0;
+    margin: auto;
+}
+.resizeP3{
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: solid #ffffff 1px;
+    cursor: ns-resize;
+    position: absolute;
+    top: -8px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.resizeP4{
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: solid #ffffff 1px;
+    cursor: ns-resize;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.resizeP5{
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: solid #ffffff 1px;
+    border-top-left-radius: 2px;
+    cursor: nwse-resize;
+    position: absolute;
+    left: -6px;
+    top: -6px;
+}
+.resizeP6{
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: solid #ffffff 1px;
+    border-top-right-radius: 2px;
+    cursor: nesw-resize;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+}
+.resizeP7{
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: solid #ffffff 1px;
+    border-bottom-right-radius: 2px;
+    cursor: nwse-resize;
+    position: absolute;
+    right: -6px;
+    bottom: -6px;
+}
+.resizeP8{
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: solid #ffffff 1px;
+    border-bottom-left-radius: 2px;
+    cursor: nesw-resize;
+    position: absolute;
+    left: -6px;
+    bottom: -6px;
+}
