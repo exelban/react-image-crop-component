@@ -6,6 +6,7 @@
 ![](https://s14.postimg.org/x2xyr073l/react_image_crop_component.gif)
 
 Component for easy image cropping in react
+
 For example usage check out the docs folder. Demo: [https://exelban.github.io/react-image-crop-component/](https://exelban.github.io/react-image-crop-component/)
 
 ##Install
