@@ -4,9 +4,17 @@ const ReactImageCrop = require('./../lib/ReactImageCrop');
 require ('./../lib/style.css');
 
 const MainView = React.createClass({
+    getInitialState() {
+        return ({
+            image: null,
+            online: false
+        });
+    },
     render(){
-        return (<div style={{width: "700px", height: "500px", margin: "0 auto"}}>
+        return (<div className="appBlock">
             <ReactImageCrop square={false} onCrop={this.onCropped} onCropData={this.onCroppedData}  onChange={this.onChanged} src="demo.jpg"/>
+            <button onClick={this.cropImage}>Crop</button> <br/>
+            <img ref="image"/>
         </div>);
     },
     onChanged: function (e) {
@@ -14,9 +22,13 @@ const MainView = React.createClass({
     },
     onCropped: function (e) {
         console.log("Cropped image", e);
+        this.setState({image: e});
     },
     onCroppedData: function (e) {
         console.log("Cropped size", e);
+    },
+    cropImage: function () {
+        if(this.state.image!=null) this.refs.image.src = this.state.image
     }
 });
 
