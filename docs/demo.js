@@ -18,14 +18,14 @@ const MainView = React.createClass({
         </div>);
     },
     onChanged: function (e) {
-        console.log("Changed");
+        //console.log("Changed");
     },
     onCropped: function (e) {
-        console.log("Cropped image", e);
+        //console.log("Cropped image", e);
         this.setState({image: e});
     },
     onCroppedData: function (e) {
-        console.log("Cropped size", e);
+        //console.log("Cropped size", e);
     },
     cropImage: function () {
         if(this.state.image!=null) this.refs.image.src = this.state.image
