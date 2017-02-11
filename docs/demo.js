@@ -1,7 +1,6 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
-const ReactImageCrop = require('./../lib/ReactImageCrop');
-require ('./../lib/style.css');
+const ReactImageCrop = require('../index.js');
 
 const MainView = React.createClass({
     getInitialState() {
