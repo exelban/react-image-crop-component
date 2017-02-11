@@ -1,5 +1,5 @@
 # react-image-crop-component
-[![build status](https://img.shields.io/wercker/ci/wercker/docs.svg)](http://www.npmjs.com/package/react-image-crop-component)
+[![build status](https://travis-ci.org/exelban/react-image-crop-component.svg?branch=master)](https://travis-ci.org/exelban/react-image-crop-component)
 [![npm version](https://badge.fury.io/js/react-image-crop-component.svg)](http://www.npmjs.com/package/react-image-crop-component)
 [![Download Count](http://img.shields.io/npm/dt/react-image-crop-component.svg)](http://www.npmjs.com/package/react-image-crop-component)
 
