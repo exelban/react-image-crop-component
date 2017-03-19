@@ -131,4 +131,4 @@ Passes the current crop state object, as well as a pixel-converted crop for your
     resize: React.PropTypes.bool
 ```
 ##License
-**MIT Licensed**
+**Apache License 2.0**
