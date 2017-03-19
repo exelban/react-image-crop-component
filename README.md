@@ -9,12 +9,12 @@ Component for easy image cropping in react
 
 For example usage check out the docs folder. Demo: [https://exelban.github.io/react-image-crop-component/](https://exelban.github.io/react-image-crop-component/)
 
-##Install
+## Install
 ```javascript
 npm install react-image-crop-component
 ```
 
-##Usage
+## Usage
 Include the main js module, e.g.:
 ```javascript
 var ReactImageCrop = require('react-image-crop-component');
@@ -24,7 +24,7 @@ import ReactImageCrop from 'react-image-crop-component';
 You must to use some css compiler.
 I recommend [browserify-css](https://github.com/cheton/browserify-css).
 
-###Example
+### Example
 ```javascript
 var React = require('react');
 var ReactDOM = require('react-dom');
@@ -51,44 +51,44 @@ var Demo = React.createClass({
 ReactDOM.render(<Demo/>, document.getElementById('app'));
 ```
 
-###Props
-#####src (REQUIRED, String)
+### Props
+##### src (REQUIRED, String)
 ```javascript
 <ReactImageCrop src="demo.jpg"/>
 ```
 You can of course pass a blob path or base64 data.
 
-#####setWidth (optional, Number)
+##### setWidth (optional, Number)
 ```javascript
 <ReactImageCrop setWidth={300} src="demo.jpg"/>
 ```
 You can set cropper element width. Default 100%. (If you have some problems with size in Google Chrome, try to set his value).
 
-#####setHeight (optional, Number)
+##### setHeight (optional, Number)
 ```javascript
 <ReactImageCrop setHeight={300} src="demo.jpg"/>
 ```
 You can set cropper element height. Default 100%. (If you have some problems with size in Google Chrome, try to set his value).
 
-#####resize (optional, Boolean)
+##### resize (optional, Boolean)
 ```javascript
 <ReactImageCrop resize={true} src="demo.jpg"/>
 ```
 If true, user can resize cropping element. Default value is ```true```
 
-#####square (optional, Boolean)
+##### square (optional, Boolean)
 ```javascript
 <ReactImageCrop square={true} src="demo.jpg"/>
 ```
 If true, the selection will have an a square one. Default value is ```false```
 
-#####onCrop (optional, Function)
+##### onCrop (optional, Function)
 ```javascript
 <ReactImageCrop onCrop={this.test} src="demo.jpg"/>
 ```
 A callback which happens after a resize, drag, or nudge. Passes the current crop state object, as well as a pixel-converted crop for your convenience.
 
-#####onCropData (optional, Function)
+##### onCropData (optional, Function)
 ```javascript
 <ReactImageCrop onCropData={this.test} src="demo.jpg"/>
 ```
@@ -103,7 +103,7 @@ Return:
   }
 ```
 
-#####onChange (optional, Function)
+##### onChange (optional, Function)
 ```javascript
 <ReactImageCrop onChange={this.test} src="demo.jpg"/>
 ```
@@ -119,7 +119,7 @@ Return:
 ```
 Passes the current crop state object, as well as a pixel-converted crop for your convenience.
 
-#####PropTypes
+##### PropTypes
 ```javascript
     src: React.PropTypes.string,
     onCrop: React.PropTypes.func,
@@ -130,5 +130,5 @@ Passes the current crop state object, as well as a pixel-converted crop for your
     setHeight: React.PropTypes.number,
     resize: React.PropTypes.bool
 ```
-##License
+## License
 **Apache License 2.0**
