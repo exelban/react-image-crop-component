@@ -22,8 +22,8 @@ import ReactImageCrop from 'react-image-crop-component';
 You must to use some css compiler.
 I recommend [browserify-css](https://github.com/cheton/browserify-css).
 
-Or you can connect css file to you html or babel:
-```./node-modules/react-image-crop-component/style.css```
+Or you can connect css file to you html or gulp:
+```./node-modules/react-image-crop-component/style.css```.
 
 ## Example
 ```javascript
