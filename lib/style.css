@@ -1,4 +1,4 @@
-.block{
+.RICC_main_container{
     width: auto;
     height: auto;
     min-width: 0;
@@ -6,34 +6,71 @@
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
-    ms-usermsUserSelect: none;
+    -ms-user-select: none;
     user-select: none;
     overflow: hidden;
+    margin: 0 auto;
 }
-.crop{
+.RICC_crop_block{
     width: 0;
     height: 0;
     background: transparent;
+    cursor: move;
+    position: absolute;
+    border: dashed #dddddd 0px;
+    z-index: 2;
+    border-radius: 1px;
+    display: none;
+    top: 0;
+    left: 0;
+}
+.RICC_crop_block_left_resize{
+    width: 0;
+    border-left: dashed #dddddd 2px;
+    height: 100%;
+    background: rgba(33, 33, 33, 0.6);
     position: absolute;
     cursor: move;
-    border: dashed #dddddd 2px;
-    z-index: 2;
-    border-radius: 4px;
-    display: none;
-    top: 50px;
-    left: 50px;
 }
-.preview{
+.RICC_crop_block_right_resize{
+    width: 0;
+    height: 100%;
+    border-right: dashed #dddddd 2px;
+    background: rgba(33, 33, 33, 0.6);
+    position: absolute;
+    right: 0;
+    cursor: move;
+}
+.RICC_crop_block_left_right_cursor{
+    cursor: ew-resize;
+}
+.RICC_crop_block_top_resize{
+    width: 100%;
+    height: 0;
+    border-top: dashed #dddddd 2px;
+    background: rgba(33, 33, 33, 0.6);
+    position: absolute;
+    cursor: move;
+}
+.RICC_crop_block_bottom_resize{
+    width: 100%;
+    height: 0;
+    border-bottom: dashed #dddddd 2px;
+    background: rgba(33, 33, 33, 0.6);
+    position: absolute;
+    bottom: 0;
+    cursor: move;
+}
+.RICC_crop_block_top_bottom_cursor{
+    cursor: ns-resize;
+}
+.RICC_crop_preview{
     width: 100%;
     height: 100%;
     cursor: move;
     overflow: hidden;
 }
-.img{
-    max-height: 100%;
-    max-width: 100%;
-}
-.bg{
+.RICC_bg{
     width: 100%;
     height: 100%;
     background: rgba(33, 33, 33, 0.6);
@@ -43,103 +80,7 @@
     z-index: 1;
     cursor: crosshair;
 }
-.resizeP0{
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: solid #ffffff 0px;
-    cursor: move;
-    position: absolute;
-}
-.resizeP1{
-    width: 10px;
-    height: 10px;
-    background: transparent;
-    border: solid #ffffff 1px;
-    cursor: ew-resize;
-    position: absolute;
-    top: 0;
-    left: -8px;
-    bottom: 0;
-    margin: auto;
-}
-.resizeP2{
-    width: 10px;
-    height: 10px;
-    background: transparent;
-    border: solid #ffffff 1px;
-    cursor: ew-resize;
-    position: absolute;
-    top: 0;
-    right: -8px;
-    bottom: 0;
-    margin: auto;
-}
-.resizeP3{
-    width: 10px;
-    height: 10px;
-    background: transparent;
-    border: solid #ffffff 1px;
-    cursor: ns-resize;
-    position: absolute;
-    top: -8px;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-.resizeP4{
-    width: 10px;
-    height: 10px;
-    background: transparent;
-    border: solid #ffffff 1px;
-    cursor: ns-resize;
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-.resizeP5{
-    width: 10px;
-    height: 10px;
-    background: transparent;
-    border: solid #ffffff 1px;
-    border-top-left-radius: 2px;
-    cursor: nwse-resize;
-    position: absolute;
-    left: -6px;
-    top: -6px;
-}
-.resizeP6{
-    width: 10px;
-    height: 10px;
-    background: transparent;
-    border: solid #ffffff 1px;
-    border-top-right-radius: 2px;
-    cursor: nesw-resize;
-    position: absolute;
-    right: -6px;
-    top: -6px;
-}
-.resizeP7{
-    width: 10px;
-    height: 10px;
-    background: transparent;
-    border: solid #ffffff 1px;
-    border-bottom-right-radius: 2px;
-    cursor: nwse-resize;
-    position: absolute;
-    right: -6px;
-    bottom: -6px;
-}
-.resizeP8{
-    width: 10px;
-    height: 10px;
-    background: transparent;
-    border: solid #ffffff 1px;
-    border-bottom-left-radius: 2px;
-    cursor: nesw-resize;
-    position: absolute;
-    left: -6px;
-    bottom: -6px;
+.RICC_image{
+    max-height: 100%;
+    max-width: 100%;
 }
