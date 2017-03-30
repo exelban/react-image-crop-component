@@ -24,26 +24,32 @@ import ReactImageCrop from 'react-image-crop-component';
 You must to use some css compiler.
 I recommend [browserify-css](https://github.com/cheton/browserify-css).
 
-### Example
+Or you can connect css file to you html or babel:
+```./node-modules/react-image-crop-component/style.css```
+
+## Example
 ```javascript
-var React = require('react');
-var ReactDOM = require('react-dom');
-var ReactImageCrop = require('react-image-crop-component');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactImageCrop from 'react-image-crop-component';
 require ('react-image-crop-component/lib/style.css');
 
-var Demo = React.createClass({
+let Demo = React.createClass({
     render(){
         return (<div style={{width: "300px", height: "300px"}}>
-            <ReactImageCrop setWidth={300} setHeight={300} square={false} onCrop={this.onCropped} onCropData={this.onCroppedData}  onChange={this.onChanged} src="demo.jpg"/>
+            <ReactImageCrop src="demo.jpg"
+                            setWidth={300} 
+                            setHeight={300} 
+                            square={false} 
+                            resize={true}
+                            border={"dashed #ffffff 2px"}
+                            onCrop={this.onCropped}/>
         </div>);
     },
-    onChanged: function (e) {
-        console.log(e);
-    },
     onCropped: function (e) {
-        console.log(e);
-    },
-    onCroppedData: function (e) {
+        let image = e[0];
+        let image_data = e[1];
+        
         console.log(e);
     }
 });
@@ -70,65 +76,52 @@ You can set cropper element width. Default 100%. (If you have some problems with
 ```
 You can set cropper element height. Default 100%. (If you have some problems with size in Google Chrome, try to set his value).
 
-##### resize (optional, Boolean)
-```javascript
-<ReactImageCrop resize={true} src="demo.jpg"/>
-```
-If true, user can resize cropping element. Default value is ```true```
-
 ##### square (optional, Boolean)
 ```javascript
 <ReactImageCrop square={true} src="demo.jpg"/>
 ```
 If true, the selection will have an a square one. Default value is ```false```
 
+##### resize (optional, Boolean)
+```javascript
+<ReactImageCrop resize={true} src="demo.jpg"/>
+```
+If true, user can resize cropping element. Default value is ```true```
+
+##### border (optional, String)
+```javascript
+<ReactImageCrop border={"dashed #ffffff 2px"} src="demo.jpg"/>
+```
+You can set crop box border style.
+
 ##### onCrop (optional, Function)
 ```javascript
 <ReactImageCrop onCrop={this.test} src="demo.jpg"/>
 ```
 A callback which happens after a resize, drag, or nudge. Passes the current crop state object, as well as a pixel-converted crop for your convenience.
-
-##### onCropData (optional, Function)
-```javascript
-<ReactImageCrop onCropData={this.test} src="demo.jpg"/>
-```
-A callback which happens after a resize, drag, or nudge.
 Return:
 ```javascript
-  {
-    w: selection width,
-    h: selection height,
-    l: selection offsetLeft,
-    t: selection offsetTop
-  }
+  [ 
+    imageObject,
+    {
+        w: selection width,
+        h: selection height,
+        l: selection offsetLeft,
+        t: selection offsetTop
+    }
+  ]
 ```
 
-##### onChange (optional, Function)
-```javascript
-<ReactImageCrop onChange={this.test} src="demo.jpg"/>
-```
-A callback which happens for every change of the crop (i.e. many times as you are dragging/resizing).
-Return:
-```javascript
-  {
-    w: selection width,
-    h: selection height,
-    l: selection offsetLeft,
-    t: selection offsetTop
-  }
-```
-Passes the current crop state object, as well as a pixel-converted crop for your convenience.
-
-##### PropTypes
+#### PropTypes
 ```javascript
     src: React.PropTypes.string,
-    onCrop: React.PropTypes.func,
-    onCropData: React.PropTypes.func,
-    onChange: React.PropTypes.func,
-    square: React.PropTypes.bool,
     setWidth: React.PropTypes.number,
     setHeight: React.PropTypes.number,
-    resize: React.PropTypes.bool
+    square: React.PropTypes.bool,
+    resize: React.PropTypes.bool,
+    border: React.PropTypes.string,
+    onCrop: React.PropTypes.func
 ```
+
 ## License
-**Apache License 2.0**
+[Apache License 2.0](https://github.com/exelban/react-image-crop-component/blob/master/LICENSE)
