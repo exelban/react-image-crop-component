@@ -30,7 +30,6 @@ Or you can connect css file to you html or babel:
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactImageCrop from 'react-image-crop-component';
-require ('react-image-crop-component/lib/style.css');
 
 let Demo = React.createClass({
     render(){
