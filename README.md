@@ -58,6 +58,8 @@ ReactDOM.render(<Demo/>, document.getElementById('app'));
 ```
 
 ### Props
+Doubleclick on crop box will reset cropping.
+
 ##### src (REQUIRED, String)
 ```javascript
 <ReactImageCrop src="demo.jpg"/>
