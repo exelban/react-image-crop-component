@@ -19,7 +19,7 @@
     "react-component"
   ],
   "scripts": {
-    "build": "babel src -d lib",
+    "build": "babel src -d lib --copy-files",
     "prepare": "npm run build",
     "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 0"
@@ -28,7 +28,7 @@
     "name": "Serhiy Mytrovtsiy",
     "email": "mitrovtsiy@ukr.net"
   },
-  "license": "Apache License 2.0",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/exelban/react-image-crop-component.git"
@@ -37,8 +37,16 @@
     "url": "https://github.com/exelban/react-image-crop-component/issues"
   },
   "homepage": "https://github.com/exelban/react-image-crop-component",
-  "devDependencies": {
+  "dependencies": {
     "babel-cli": "~6.24.0",
-    "babel-preset-es2015": "~6.24.0"
+    "babel-preset-es2015": "~6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "browserify-css": "^0.10.0"
+  },
+  "babel": {
+    "presets": [
+        "es2015",
+        "react"
+    ]
   }
 }
