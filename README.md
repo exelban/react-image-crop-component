@@ -1,6 +1,6 @@
 # react-image-crop-component
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/exelban/react-image-crop-component.svg)]
+![Greenkeeper badge](https://badges.greenkeeper.io/exelban/react-image-crop-component.svg)
 [![build status](https://travis-ci.org/exelban/react-image-crop-component.svg?branch=master)](https://travis-ci.org/exelban/react-image-crop-component)
 [![npm version](https://badge.fury.io/js/react-image-crop-component.svg)](http://www.npmjs.com/package/react-image-crop-component)
 [![Download Count](https://img.shields.io/npm/dm/react-image-crop-component.svg)](http://www.npmjs.com/package/react-image-crop-component)
