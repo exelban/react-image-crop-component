@@ -18,10 +18,10 @@
     "android",
     "react-component"
   ],
-  "scripts": {,
+  "scripts": {
     "build": "babel src -d lib",
     "prepare": "npm run build",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "author": {
