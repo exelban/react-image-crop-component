@@ -1,5 +1,5 @@
 const React = require('react');
-require ('./lib/style.css');
+require ('style.css');
 let dbTimeout,
     dbLastTap = 0;
 
