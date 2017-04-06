@@ -1,0 +1,86 @@
+.RICC_main_container{
+    width: auto;
+    height: auto;
+    min-width: 0;
+    position: relative;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.RICC_crop_block{
+    width: 0;
+    height: 0;
+    background: transparent;
+    cursor: move;
+    position: absolute;
+    border: dashed #dddddd 0px;
+    z-index: 2;
+    border-radius: 1px;
+    display: none;
+    top: 0;
+    left: 0;
+}
+.RICC_crop_block_left_resize{
+    width: 0;
+    border-left: dashed #dddddd 2px;
+    height: 100%;
+    background: rgba(33, 33, 33, 0.6);
+    position: absolute;
+    cursor: move;
+}
+.RICC_crop_block_right_resize{
+    width: 0;
+    height: 100%;
+    border-right: dashed #dddddd 2px;
+    background: rgba(33, 33, 33, 0.6);
+    position: absolute;
+    right: 0;
+    cursor: move;
+}
+.RICC_crop_block_left_right_cursor{
+    cursor: ew-resize;
+}
+.RICC_crop_block_top_resize{
+    width: 100%;
+    height: 0;
+    border-top: dashed #dddddd 2px;
+    background: rgba(33, 33, 33, 0.6);
+    position: absolute;
+    cursor: move;
+}
+.RICC_crop_block_bottom_resize{
+    width: 100%;
+    height: 0;
+    border-bottom: dashed #dddddd 2px;
+    background: rgba(33, 33, 33, 0.6);
+    position: absolute;
+    bottom: 0;
+    cursor: move;
+}
+.RICC_crop_block_top_bottom_cursor{
+    cursor: ns-resize;
+}
+.RICC_crop_preview{
+    width: 100%;
+    height: 100%;
+    cursor: move;
+    overflow: hidden;
+}
+.RICC_bg{
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 33, 33, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    cursor: crosshair;
+}
+.RICC_image{
+    max-height: 100%;
+    max-width: 100%;
+}
