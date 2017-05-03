@@ -1,26 +1,11 @@
-const React = require('react');
-require ('./style.css');
-let dbTimeout,
-    dbLastTap = 0;
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+let dbLastTap = 0;
 
-const ReactImageCrop = React.createClass({
-    displayName: 'ReactImageCrop',
-    propTypes: {
-        src: React.PropTypes.string,
-        setWidth: React.PropTypes.number,
-        setHeight: React.PropTypes.number,
-        square: React.PropTypes.bool,
-        resize: React.PropTypes.bool,
-        border: React.PropTypes.string,
-        onCrop: React.PropTypes.func
-    },
-    getDefaultProps: function() {
-        return {
-            resize: true
-        };
-    },
-    getInitialState() {
-        return ({
+class ReactImageCrop extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
             activeCropBlock: false,
             moveCropBlock: false,
             resizeCropBlock: false,
@@ -47,16 +32,19 @@ const ReactImageCrop = React.createClass({
             resize: {
                 w : 0,
                 h: 0
-            },
-            dbTime: 0,
-            dbTimeout: 0
-        });
-    },
+            }
+        };
+        this.mouseDown = this._mouseDown.bind(this);
+        this.resetCrop = this._resetCrop.bind(this);
+        this.mouseMove = this._mouseMove.bind(this);
+        this.mouseUp = this._mouseUp.bind(this);
+        this.dbTab = this._dbTab.bind(this);
+    }
     componentDidMount(){
-        document.addEventListener("mousemove", this._mouseMove);
-        document.addEventListener("mouseup", this._mouseUp);
-        document.addEventListener("touchmove", this._mouseMove);
-        document.addEventListener("touchend", this._dbTab);
+        document.addEventListener("mousemove", this.mouseMove);
+        document.addEventListener("mouseup", this.mouseUp);
+        document.addEventListener("touchmove", this.mouseMove);
+        document.addEventListener("touchend", this.dbTab);
         let image = new Image();
         image.src = this.props.src;
         let a = this;
@@ -88,29 +76,37 @@ const ReactImageCrop = React.createClass({
                 blockY: block.getBoundingClientRect().top
             });
         };
-    },
+    }
+    componentWillUnmount(){
+        document.removeEventListener("mousemove", this.mouseMove);
+        document.removeEventListener("mouseup", this.mouseUp);
+        document.removeEventListener("touchmove", this.mouseMove);
+        document.removeEventListener("touchend", this.dbTab);
+    }
     render(){
-        return(<div className="RICC_main_container" ref="RICC_main_container" onTouchStart={this._mouseDown}
-                    onMouseDown={this._mouseDown} onDoubleClick={this._resetCrop}>
-            <div className="RICC_crop_block" ref="RICC_crop_block">
-                <div style={this.props.borderStyle ? { borderLeft: this.props.borderStyle } : {}}
-                     className={"RICC_crop_block_left_resize" + (this.props.resize ?
-                         " RICC_crop_block_left_right_cursor" : "")} ref="RICC_crop_block_left_resize"/>
-                <div style={this.props.borderStyle ? { borderRight: this.props.borderStyle } : {}}
-                     className={"RICC_crop_block_right_resize" + (this.props.resize ?
-                         " RICC_crop_block_left_right_cursor" : "")} ref="RICC_crop_block_right_resize"/>
-                <div style={this.props.borderStyle ? { borderTop: this.props.borderStyle } : {}}
-                     className={"RICC_crop_block_top_resize" + (this.props.resize ?
-                         " RICC_crop_block_top_bottom_cursor" : "")} ref="RICC_crop_block_top_resize"/>
-                <div style={this.props.borderStyle ? { borderBottom: this.props.borderStyle } : {}}
-                     className={"RICC_crop_block_bottom_resize" + (this.props.resize ?
-                         " RICC_crop_block_top_bottom_cursor" : "")} ref="RICC_crop_block_bottom_resize"/>
-                <div className="RICC_crop_preview"><img src={this.props.src} ref="RICC_crop_preview"/></div>
+        return(
+            <div className="RICC_main_container" ref="RICC_main_container" onTouchStart={this.mouseDown}
+                                            onMouseDown={this.mouseDown} onDoubleClick={this.resetCrop}>
+                <div className="RICC_crop_block" ref="RICC_crop_block">
+                    <div style={this.props.borderStyle ? { borderLeft: this.props.borderStyle } : {}}
+                                className={"RICC_crop_block_left_resize" + (this.props.resize ?
+                    " RICC_crop_block_left_right_cursor" : "")} ref="RICC_crop_block_left_resize"/>
+                    <div style={this.props.borderStyle ? { borderRight: this.props.borderStyle } : {}}
+                                className={"RICC_crop_block_right_resize" + (this.props.resize ?
+                    " RICC_crop_block_left_right_cursor" : "")} ref="RICC_crop_block_right_resize"/>
+                    <div style={this.props.borderStyle ? { borderTop: this.props.borderStyle } : {}}
+                                className={"RICC_crop_block_top_resize" + (this.props.resize ?
+                    " RICC_crop_block_top_bottom_cursor" : "")} ref="RICC_crop_block_top_resize"/>
+                    <div style={this.props.borderStyle ? { borderBottom: this.props.borderStyle } : {}}
+                            className={"RICC_crop_block_bottom_resize" + (this.props.resize ?
+                    " RICC_crop_block_top_bottom_cursor" : "")} ref="RICC_crop_block_bottom_resize"/>
+                    <div className="RICC_crop_preview"><img src={this.props.src} ref="RICC_crop_preview"/></div>
+                </div>
+                <div className="RICC_bg" ref="RICC_bg_block"/>
+                <img className="RICC_image" ref="RICC_image" src={this.props.src}/>
             </div>
-            <div className="RICC_bg" ref="RICC_bg_block"/>
-            <img className="RICC_image" ref="RICC_image" src={this.props.src}/>
-        </div>);
-    },
+    );
+    }
     _mouseDown(e){
         e.preventDefault();
         let main_block = this.refs.RICC_main_container,
@@ -205,7 +201,7 @@ const ReactImageCrop = React.createClass({
         }
 
         this.setState({status: true});
-    },
+    }
     _mouseMove(e){
         if (this.state.status){
             e.preventDefault();
@@ -348,7 +344,7 @@ const ReactImageCrop = React.createClass({
                 }
             }
         }
-    },
+    }
     _mouseUp(e){
         if(this.state.status){
             e.preventDefault();
@@ -358,7 +354,7 @@ const ReactImageCrop = React.createClass({
             if(this.props.onCrop) this.props.onCrop(this._onCrop());
             this.setState({status: false});
         }
-    },
+    }
     _onCrop(){
         let w = this.refs.RICC_crop_block.offsetWidth,
             h = this.refs.RICC_crop_block.offsetHeight,
@@ -382,7 +378,7 @@ const ReactImageCrop = React.createClass({
         if(ratioH<1) ratioH=1;
 
         return [canvas.toDataURL(), { y: t*ratio, x: l*ratio, w: w*ratioH, h: h*ratioH }];
-    },
+    }
     _resetCrop(){
         let crop_block = this.refs.RICC_crop_block,
             preview_block = this.refs.RICC_crop_preview;
@@ -396,17 +392,30 @@ const ReactImageCrop = React.createClass({
         this.setState({
             activeCropBlock: false
         });
-    },
+    }
     _dbTab(e){
-        let currentTime = new Date().getTime();
-        let tapLength = currentTime - dbLastTap;
+        let currentTime = new Date().getTime(),
+            tapLength = currentTime - dbLastTap;
         if (tapLength < 250 && tapLength > 0) {
-            console.log(tapLength);
             this._resetCrop();
             e.preventDefault();
         } else this._mouseUp(e);
         dbLastTap = currentTime;
     }
-});
+}
 
-module.exports = ReactImageCrop;
+ReactImageCrop.defaultProps = {
+    resize: true
+};
+
+ReactImageCrop.propTypes = {
+    src: PropTypes.string,
+    setWidth: PropTypes.number,
+    setHeight: PropTypes.number,
+    square: PropTypes.bool,
+    resize: PropTypes.bool,
+    border: PropTypes.string,
+    onCrop: PropTypes.func
+};
+
+export default ReactImageCrop
