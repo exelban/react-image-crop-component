@@ -15,32 +15,36 @@ npm install react-image-crop-component
 ```
 
 ## Usage
-Include the main js module, e.g.:
+Include the main js module:
 ```javascript
 var ReactImageCrop = require('react-image-crop-component');
-require('react-image-crop-component/lib/style.css');
-
 // or es6:
-
 import ReactImageCrop from 'react-image-crop-component';
+```
+
+Include the main css: <br/>
+If you use css compiler. I recommend [browserify-css](https://github.com/cheton/browserify-css).
+```javascript
+require('react-image-crop-component/lib/style.css');
+// or es6:
 import 'react-image-crop-component/lib/style.css';
 ```
-You must to use some css compiler.
-I recommend [browserify-css](https://github.com/cheton/browserify-css).
-```javascript
-.transform('browserify-css', {
-            global: true
-        })
-```
+
+Or you can manualy add [CSS](https://github.com/exelban/react-image-crop-component/blob/master/lib/style.css).
+
 
 ## Example
 ```javascript
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import ReactImageCrop from 'react-image-crop-component';
 import 'react-image-crop-component/lib/style.css';
 
-let Demo = React.createClass({
+class Demo extends Component{
+    constructor(){
+        super();
+        this.onCropped = this._onCropped.bind(this);
+    }
     render(){
         return (<div style={{width: "300px", height: "300px"}}>
             <ReactImageCrop src="demo.jpg"
@@ -52,11 +56,9 @@ let Demo = React.createClass({
                             onCrop={this.onCropped}/>
         </div>);
     },
-    onCropped: function (e) {
+    _onCropped: function (e) {
         let image = e[0];
         let image_data = e[1];
-        
-        console.log(e);
     }
 });
 
@@ -122,13 +124,13 @@ Return:
 
 #### PropTypes
 ```javascript
-    src: React.PropTypes.string,
-    setWidth: React.PropTypes.number,
-    setHeight: React.PropTypes.number,
-    square: React.PropTypes.bool,
-    resize: React.PropTypes.bool,
-    border: React.PropTypes.string,
-    onCrop: React.PropTypes.func
+    src: PropTypes.string,
+    setWidth: PropTypes.number,
+    setHeight: PropTypes.number,
+    square: PropTypes.bool,
+    resize: PropTypes.bool,
+    border: PropTypes.string,
+    onCrop: PropTypes.func
 ```
 
 ## License
