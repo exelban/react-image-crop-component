@@ -19,7 +19,7 @@
     "react-component"
   ],
   "scripts": {
-    "build": "babel src -d lib --copy-files",
+    "build": "babel src -d lib && minify --output ./lib/style.css ./src/style.css",
     "prepare": "npm run build",
     "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 0"
@@ -43,6 +43,7 @@
     "babel-preset-es2015": "~6.24.0",
     "babel-preset-react": "^6.23.0",
     "browserify-css": "^0.10.0",
+    "minifier": "^0.8.1",
     "prop-types": "^15.5.8",
     "react": "^15.5.4"
   },
