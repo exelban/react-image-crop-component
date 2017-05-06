@@ -3,3 +3,5 @@ node_modules/
 docs/
 .travis.yml
 gulpfile.js
+.idea
+.idea/vcs.xml
