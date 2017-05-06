@@ -1,8 +1,10 @@
 # react-image-crop-component
 
-[![david-dm-badge](https://david-dm.org/exelban/react-image-crop-component.svg)](https://david-dm.org/exelban/react-image-crop-component)
-[![build status](https://travis-ci.org/exelban/react-image-crop-component.svg?branch=master)](https://travis-ci.org/exelban/react-image-crop-component)
-[![Download Count](https://img.shields.io/npm/dm/react-image-crop-component.svg)](http://www.npmjs.com/package/react-image-crop-component)
+[![Codacy grade](https://img.shields.io/codacy/grade/a4ead017db524403b11874989034dd2f.svg?style=flat-square)](https://www.codacy.com/app/exelban/react-image-crop-component)
+[![David](https://img.shields.io/david/exelban/react-image-crop-component.svg?style=flat-square)](https://david-dm.org/exelban/react-image-crop-component)
+[![Travis](https://img.shields.io/travis/exelban/react-image-crop-component.svg?style=flat-square)](https://travis-ci.org/exelban/react-image-crop-component)
+[![Download Count](https://img.shields.io/npm/dm/react-image-crop-component.svg?style=flat-square)](http://www.npmjs.com/package/react-image-crop-component)
+
 
 [![Demo image](https://s3.eu-central-1.amazonaws.com/serhiy/Github_repo/react-image-crop-component-2.gif)](https://exelban.github.io/react-image-crop-component)
 
@@ -35,7 +37,7 @@ Or you can manualy add [CSS](https://github.com/exelban/react-image-crop-compone
 ## Example
 ```javascript
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-dom';
 import ReactImageCrop from 'react-image-crop-component';
 import 'react-image-crop-component/lib/style.css';
 
@@ -61,7 +63,7 @@ class Demo extends Component{
     }
 });
 
-ReactDOM.render(<Demo/>, document.getElementById('app'));
+render(<Demo/>, document.getElementById('app'));
 ```
 
 ### Props
