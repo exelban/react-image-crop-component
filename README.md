@@ -1,5 +1,6 @@
 # react-image-crop-component
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a4ead017db524403b11874989034dd2f)](https://www.codacy.com/app/exelban/react-image-crop-component?utm_source=github.com&utm_medium=referral&utm_content=exelban/react-image-crop-component&utm_campaign=badger)
 [![Codacy grade](https://img.shields.io/codacy/grade/a4ead017db524403b11874989034dd2f.svg?style=flat-square)](https://www.codacy.com/app/exelban/react-image-crop-component)
 [![David](https://img.shields.io/david/exelban/react-image-crop-component.svg?style=flat-square)](https://david-dm.org/exelban/react-image-crop-component)
 [![Travis](https://img.shields.io/travis/exelban/react-image-crop-component.svg?style=flat-square)](https://travis-ci.org/exelban/react-image-crop-component)
