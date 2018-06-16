@@ -128,7 +128,7 @@ A callback called when resize or drag event ended. Passes the current crop state
 This callback will be called when crop will be zero.
 
 ## What's new
-### v1.0.0
+### v1.1.2
     - updated all dependencies;
     - added flow types;
     - added eslint;
