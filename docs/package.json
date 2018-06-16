@@ -28,7 +28,7 @@
     "cursor-position": "^0.0.3",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-image-crop-component": "^0.3.1",
+    "react-image-crop-component": "^0.3.2",
     "react-toggle": "^4.0.2"
   }
 }
