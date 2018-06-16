@@ -1,7 +1,10 @@
 .gitignore
-node_modules/
-docs/
-.travis.yml
-gulpfile.js
+node_modules
+docs
 .idea
-.idea/vcs.xml
+yarn.lock
+yarn-error.log
+
+.babelrc.js
+.eslintrc.js
+.flowconfig
