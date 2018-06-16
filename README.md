@@ -74,31 +74,31 @@ render(<Demo/>, document.getElementById('app'));
 **onCrop** | **Function** | **Called when crop action was finished**
 **onReset** | **Function** | **Called when crop box reset**
 
-### src (REQUIRED, String)  
+#### src (REQUIRED, String)  
 ```javascript
 <ImageCrop src="demo.jpg"/>
 ```
 You can of course pass a blob path or base64 data.
 
-### maxWidth (optional, String)  
+#### maxWidth (optional, String)  
 ```javascript
 <ImageCrop maxWidth='300px' src='demo.jpg'/>
 ```
 Max width of crop component. Default script will try to set max width 100%. But if You have some problem with sizing, provide this value.
 
-### maxHeight (optional, String)  
+#### maxHeight (optional, String)  
 ```javascript
 <ImageCrop maxHeight='300px' src='demo.jpg'/>
 ```
 Max width of crop component. Default script will try to set max width 100%. But if You have some problem with sizing, provide this value.
 
-### square (optional, boolean)  
+#### square (optional, boolean)  
 ```javascript
 <ImageCrop square={true} src='demo.jpg'/>
 ```
 If true, the selection will have an a square one. Default value is ```false```.
 
-### watch (optional, Function)  
+#### watch (optional, Function)  
 ```javascript
 <ImageCrop watch={this.watch} src='demo.jpg'/>
 ```
@@ -115,13 +115,13 @@ A callback called continuously when user crop or drag cropping block. Return obj
 }
 ```
 
-### onCrop (optional, Function)  
+#### onCrop (optional, Function)  
 ```javascript
 <ImageCrop onCrop={this.onCrop} src='demo.jpg'/>
 ```
 A callback called when resize or drag event ended. Passes the current crop state object, as well as a pixel-converted crop for your convenience. Return the same object as in ```watch```
 
-### onReset (optional, Function)  
+#### onReset (optional, Function)  
 ```javascript
 <ImageCrop onReset={this.onReset} src='demo.jpg'/>
 ```
