@@ -1,17 +1,15 @@
 module.exports = {
   presets: [
     [
-      "@babel/env",
-      {
+      "@babel/env", {
         "modules": false,
       }
-    ],
-    [
-      '@babel/preset-stage-3',
     ],
     '@babel/preset-flow',
     '@babel/preset-react',
     'minify',
   ],
-  plugins: [],
+  plugins: [
+    ["@babel/plugin-proposal-class-properties"],
+  ],
 }

@@ -1,6 +1,7 @@
 # react-image-crop-component
 
-[![Download Count](https://img.shields.io/npm/dm/react-image-crop-component.svg?style=flat-square)](http://www.npmjs.com/package/react-image-crop-component)
+
+[![Download Count](https://img.shields.io/npm/dt/react-image-crop-component.svg?style=flat-square)](http://www.npmjs.com/package/react-image-crop-component)
 
 [![Demo image](https://s3.eu-central-1.amazonaws.com/serhiy/Github_repo/react-image-crop-component-2.gif)](https://exelban.github.io/react-image-crop-component)
 

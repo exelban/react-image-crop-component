@@ -7,13 +7,13 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.46",
-    "@babel/preset-env": "^7.0.0-beta.46",
-    "@babel/preset-flow": "^7.0.0-beta.46",
-    "@babel/preset-react": "^7.0.0-beta.46",
-    "@babel/preset-stage-3": "^7.0.0-beta.46",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.55",
+    "@babel/preset-env": "^7.0.0-beta.55",
+    "@babel/preset-flow": "^7.0.0-beta.55",
+    "@babel/preset-react": "^7.0.0-beta.55",
     "babel-core": "7.0.0-bridge.0",
     "babel-loader": "^7.1.4",
-    "babel-preset-minify": "^0.5.0-alpha.a24dd066",
+    "babel-preset-minify": "^0.5.0-alpha.3cc09dcf",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
@@ -28,7 +28,7 @@
     "cursor-position": "^0.0.3",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-image-crop-component": "^0.3.2",
+    "react-image-crop-component": "^1.1.2",
     "react-toggle": "^4.0.2"
   }
 }

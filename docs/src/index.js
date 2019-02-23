@@ -3,10 +3,10 @@
 import React from 'react'
 import { render } from 'react-dom'
 import Toggle from 'react-toggle'
+import 'react-toggle/style.css'
 import ImageCrop from 'react-image-crop-component'
 import 'react-image-crop-component/style.css'
-import 'react-toggle/style.css'
-import './demo.jpg'
+import '../../src/style.css'
 import './style.css'
 
 
@@ -78,7 +78,7 @@ class AppView extends React.Component<Props, State> {
         <div className="main">
           <div className="images">
             <div className="CropBlock">
-              <ImageCrop src="demo.jpg"
+              <ImageCrop src="src/demo.jpg"
                               maxHeight="300px"
                               square={this.state.rectangleStatus}
                               watch={this.watch}
@@ -86,7 +86,7 @@ class AppView extends React.Component<Props, State> {
                               onReset={this.onReset}/>
             </div>
             <div className="ResultBlock">
-              <img src="demo.jpg"/>
+              <img src="src/demo.jpg"/>
             </div>
           </div>
           <div className="settings">
